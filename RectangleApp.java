@@ -10,38 +10,38 @@ public class RectangleApp {
         // static field
         System.out.println("Rectangle has " + Rectangle.NUMBER_OF_SIDES + " sides");
         // instance fields
-        System.out.println("Width: " + myRect1.width + ", Height: " + myRect1.height);
-        System.out.println("Origin is: " + myRect1.originX + "," + myRect1.originY);
+        System.out.println("Width: " + myRect1.getWidth() + ", Height: " + myRect1.getHeight());
+        System.out.println("Origin is: " + myRect1.getOriginX() + "," + myRect1.getOriginY());
         // calling methods
         System.out.println("Area: " + myRect1.getArea());
 
         System.out.println("\nMoving myRect1");
         myRect1.move(0, 10);// the object's state is changed
-        System.out.println("Origin is: " + myRect1.originX + "," + myRect1.originY);
+        System.out.println("Origin is: " + myRect1.getOriginX() + "," + myRect1.getOriginY());
 
-        System.out.println("Changing width of myRect1");
-        myRect1.width = 16;// the object's state is changed
-        System.out.println("Width: " + myRect1.width + ", Height: " + myRect1.height);
+        System.out.println("Changing.getWidth() of myRect1");
+        myRect1.setWidth(16);// the object's state is changed
+        System.out.println("Width: " + myRect1.getWidth() + ", Height: " + myRect1.getHeight());
 
         System.out.println("Creating myRect2");
         Rectangle myRect2 = new Rectangle(20.0, 8.0);
-        System.out.println("Width: " + myRect2.width + ", Height: " + myRect2.height);
-        System.out.println("Origin: " + myRect2.originX + "," + myRect2.originY);
+        System.out.println("Width: " + myRect2.getWidth() + ", Height: " + myRect2.getHeight());
+        System.out.println("Origin: " + myRect2.getOriginX() + "," + myRect2.getOriginY());
 
         System.out.println("Creating myRect3");
         Rectangle myRect3 = new Rectangle();
-        System.out.println("Width: " + myRect3.width + ", Height: " + myRect3.height);
-        System.out.println("Origin: " + myRect3.originX + "," + myRect3.originY);
+        System.out.println("Width: " + myRect3.getWidth() + ", Height: " + myRect3.getHeight());
+        System.out.println("Origin: " + myRect3.getOriginX() + "," + myRect3.getOriginY());
 
-        myRect1.scale(0.5); // applies 0.5 scale to both x and y, changing width to 8, height to 4
+        myRect1.scale(0.5); // applies 0.5 scale to both x and y, changing.getWidth() to 8, height to 4
 
-        myRect2.scale(1, 3); // should change height to 24 with width unchanged
+        myRect2.scale(1, 3); // should change height to 24 with.getWidth() unchanged
 
-        myRect3.scale(15, 10); // should scale to width 15, height 10
+        myRect3.scale(15, 10); // should scale to.getWidth() 15, height 10
 
-        System.out.println("myRect1's width: " + myRect1.width + ", height: " + myRect1.height);
-        System.out.println("myRect2's width: " + myRect2.width + ", height: " + myRect2.height);
-        System.out.println("myRect3's width: " + myRect3.width + ", height: " + myRect3.height);
+        System.out.println("myRect1's.getWidth(): " + myRect1.getWidth() + ", height: " + myRect1.getHeight());
+        System.out.println("myRect2's.getWidth(): " + myRect2.getWidth() + ", height: " + myRect2.getHeight());
+        System.out.println("myRect3's.getWidth(): " + myRect3.getWidth() + ", height: " + myRect3.getHeight());
 
         Rectangle myRect4 = new Rectangle(30.0, 5.0, 10, 10);
         Rectangle myRect5 = new Rectangle(50.0, 20.0, 0, 0);
