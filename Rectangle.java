@@ -97,11 +97,15 @@ public class Rectangle {
     // Setters
 
     public void setWidth(double width) {
-        this.width = width;
+        if (width >= 0) {
+            this.width = width;
+        }
     }
 
     public void setHeight(double height) {
-        this.height = height;
+        if (height >= 0) {
+            this.height = height;
+        }
     }
 
     public void setOrginX(double originX) {
