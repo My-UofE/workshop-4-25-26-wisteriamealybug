@@ -60,5 +60,14 @@ public class RectangleApp {
 
         Rectangle square = new Rectangle(4.0, 4.0);
         System.out.println("Is square: " + square.isSquare());
+
+        Rectangle r1 = new Rectangle(10.0, 5.0);
+        Rectangle r2 = new Rectangle(10.0, 5.0);
+        Rectangle r3 = r2;
+
+        System.out.println("Object reference tests:");
+        System.out.println("r1: " + r1);
+        System.out.println("r2: " + r2);
+        System.out.println("r3: " + r3);
     }
 }
