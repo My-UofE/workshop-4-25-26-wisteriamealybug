@@ -69,12 +69,12 @@ public class Circle {
     }
 
     public boolean isOverlappedWith(Circle c) {
-        return (Math.max(this.radius, c.radius) >= Math
+        return (this.radius + c.radius >= Math
                 .sqrt(Math.pow(this.originX - c.originX, 2) + Math.pow(this.originY - c.originY, 2)));
     }
 
     public static boolean isOverlappedWith(Circle c1, Circle c2) {
-        return (Math.max(c1.radius, c2.radius) >= Math.sqrt(Math.pow(c1.originX - c2.originX, 2)
+        return (c1.radius + c2.radius >= Math.sqrt(Math.pow(c1.originX - c2.originX, 2)
                 + Math.pow(c1.originY - c2.originY, 2)));
     }
 
