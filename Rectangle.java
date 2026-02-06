@@ -42,4 +42,38 @@ public class Rectangle {
         return 2 * (width + height);
     }
 
+    // method: scale the rectangle
+    public void scale(double scaleX, double scaleY) {
+        width *= scaleX;
+        height *= scaleY;
+    }
+
+    public void scale(double scale) {
+        scale(scale, scale);
+    }
+
+    public boolean isOverlappedWith(Rectangle r) {
+        boolean x_overlap = (Math.abs(this.originX - r.originX) <= (this.width + r.width) / 2);
+        boolean y_overlap = (Math.abs(this.originY - r.originY) <= (this.height + r.height) / 2);
+
+        return (x_overlap && y_overlap);
+    }
+
+    public static boolean areOverlapping(Rectangle r1, Rectangle r2) {
+        boolean x_overlap = (Math.abs(r1.originX - r2.originX) <= (r1.width + r2.width) / 2);
+        boolean y_overlap = (Math.abs(r1.originY - r2.originY) <= (r1.height + r2.height) / 2);
+
+        return (x_overlap && y_overlap);
+    }
+
+    public double calcRatio() {
+        return height / width;
+    }
+
+    public boolean isSquare() {
+        if (calcRatio() >= 0.999 && calcRatio() <= 1.001) {
+            return true;
+        }
+        return false;
+    }
 }
